@@ -24,9 +24,6 @@ export default async function Home() {
           <Link href="/posts" className="underline">
             すべて見る
           </Link>
-          <Link href="/history" className="underline">
-            history
-          </Link>
         </div>
       </section>
       <section>
