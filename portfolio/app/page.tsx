@@ -8,12 +8,12 @@ export default async function Home() {
     <div className="px-4 py-6">
       <section>
         <h2 className="text-sm text-neutral-200">執筆</h2>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc pl-5 space-y-1">
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={`/posts/${post.slug}`}
-                className="text-sky-500 text-sm underline"
+                className="text-sky-500 text-md underline"
               >
                 {post.frontmatter.title ?? post.slug}
               </Link>
