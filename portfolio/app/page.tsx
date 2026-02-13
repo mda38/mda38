@@ -20,14 +20,6 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-        <div className="mt-4 flex gap-4 text-sm">
-          <Link href="/posts" className="underline">
-            すべて見る
-          </Link>
-        </div>
-      </section>
-      <section>
-        <h2 className="text-sm text-neutral-200">日記</h2>
       </section>
     </div>
   );
