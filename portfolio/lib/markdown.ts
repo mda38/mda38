@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content");
 
 type PostFrontmatter = {
   title?: string;
   date?: string;
+  updated?: string;
   [key: string]: unknown;
 };
 
@@ -55,12 +54,9 @@ const getPostBySlug = async (slug: string) => {
 
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
-
   return {
     frontmatter: data as PostFrontmatter,
-    contentHtml,
+    content,
   };
 };
 

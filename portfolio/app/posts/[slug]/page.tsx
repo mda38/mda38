@@ -1,5 +1,7 @@
 import { getPostBySlug } from "@/lib/markdown";
+import Markdown from "@/components/Markdown";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -10,12 +12,16 @@ export default async function PostDetailPage({ params }: Props) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const { frontmatter, contentHtml } = post;
+  const { frontmatter, content } = post;
 
   return (
-    <article>
-      <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </article>
+    <>
+      <Link href="/">←back</Link>
+      <article>
+        <h1>{frontmatter.title}</h1>
+        <span>{frontmatter.updated}</span>
+        <Markdown markdown={content} />
+      </article>
+    </>
   );
 }
