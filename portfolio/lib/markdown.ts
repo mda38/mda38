@@ -41,7 +41,7 @@ const getAllPosts = (): PostSummary[] => {
   return posts;
 };
 
-const getPostBySlug = async (slug: string) => {
+const getPostBySlug = (slug: string) => {
   if (!slug) return null;
 
   const normalizedSlug = slug.replace(/\.md$/i, "");
