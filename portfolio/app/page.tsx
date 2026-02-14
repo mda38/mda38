@@ -5,17 +5,46 @@ export default async function Home() {
   const posts = getAllPosts();
 
   return (
-    <div className="px-4 py-6">
+    <div className="mx-4 border-x border-neutral-900 py-6">
       <section>
-        <h2 className="text-sm text-neutral-200">執筆</h2>
-        <ul className="list-disc pl-4">
+        <h2 className="text-xs border-y border-neutral-900 py-2 px-3 text-neutral-500 font-mono">
+          Engineering Notes
+        </h2>
+        <ul className="divide-y divide-neutral-900">
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={`/posts/${post.slug}`}
-                className="text-sky-500 text-sm underline"
+                className="flex flex-col gap-y-2 py-4 px-3"
               >
-                {post.frontmatter.title ?? post.slug}
+                <span className="text-sm">
+                  {post.frontmatter.title ?? post.slug}
+                </span>
+                <span className="font-mono text-xs text-neutral-500">
+                  {post.frontmatter.updated}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2 className="text-xs border-y border-neutral-900 py-2 px-3 text-neutral-500 font-mono">
+          Engineering Notes
+        </h2>
+        <ul className="divide-y divide-neutral-900">
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <Link
+                href={`/posts/${post.slug}`}
+                className="flex flex-col gap-y-2 py-4 px-3"
+              >
+                <span className="text-sm">
+                  {post.frontmatter.title ?? post.slug}
+                </span>
+                <span className="font-mono text-xs text-neutral-500">
+                  {post.frontmatter.updated}
+                </span>
               </Link>
             </li>
           ))}
