@@ -18,7 +18,7 @@ export default async function Home() {
               <li key={post.slug}>
                 <Link
                   href={`/posts/${post.slug}`}
-                  className="flex flex-col gap-y-2 py-4 px-3 rounded-md transition duration-150 ease-out active:scale-[0.99] active:bg-neutral-900/40 active:opacity-90 focus-visible:outline-2 focus-visible:outline-cyan-600/60"
+                  className="flex flex-col gap-y-1 py-4 px-3 rounded-md transition duration-150 ease-out active:scale-[0.99] active:bg-neutral-900/40 active:opacity-90 focus-visible:outline-2 focus-visible:outline-cyan-600/60"
                 >
                   <span className="text-sm">
                     {post.frontmatter.title ?? post.slug}
