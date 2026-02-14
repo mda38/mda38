@@ -8,7 +8,7 @@ export default async function Home() {
     <main className="min-h-screen bg-neutral-800/10">
       <div className="bg-neutral-950 border-x border-neutral-900 py-6 mx-4 md:mx-auto md:max-w-3xl">
         <section>
-          <h2 className="text-xs border-y border-neutral-900 py-2 px-3 text-neutral-500 font-mono">
+          <h2 className="text-xs border-y border-cyan-800 bg-cyan-950 py-2 px-3 text-cyan-600 font-mono">
             Engineering Notes
           </h2>
           <ul className="divide-y divide-neutral-900">
