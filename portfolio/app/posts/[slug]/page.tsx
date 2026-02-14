@@ -21,13 +21,13 @@ export default async function PostDetailPage({ params }: Props) {
   const { frontmatter, content } = post;
 
   return (
-    <>
+    <div className="min-h-screen bg-neutral-950">
       <Link href="/">←back</Link>
       <article>
         <h1>{frontmatter.title}</h1>
         <span>{frontmatter.updated}</span>
         <Markdown markdown={content} />
       </article>
-    </>
+    </div>
   );
 }
