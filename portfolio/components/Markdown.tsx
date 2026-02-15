@@ -27,19 +27,13 @@ const components = {
   h2: (props: ComponentPropsWithoutRef<"h2">) => (
     <h2
       {...props}
-      className={joinClassName(
-        "mt-8 mb-3 text-md font-semibold",
-        props.className,
-      )}
+      className={joinClassName("mt-8 mb-3 text-md", props.className)}
     />
   ),
   h3: (props: ComponentPropsWithoutRef<"h3">) => (
     <h3
       {...props}
-      className={joinClassName(
-        "mt-6 mb-2 text-sm font-semibold",
-        props.className,
-      )}
+      className={joinClassName("mt-6 mb-2 text-sm", props.className)}
     />
   ),
   p: (props: ComponentPropsWithoutRef<"p">) => (
@@ -60,14 +54,17 @@ const components = {
   ol: (props: ComponentPropsWithoutRef<"ol">) => (
     <ol
       {...props}
-      className={joinClassName("my-4 list-decimal pl-6", props.className)}
+      className={joinClassName(
+        "my-4 list-decimal pl-6 leading-7",
+        props.className,
+      )}
     />
   ),
   li: (props: ComponentPropsWithoutRef<"li">) => (
     <li
       {...props}
       className={joinClassName(
-        "my-1 text-sm text-neutral-400",
+        "my-1 text-sm text-neutral-400 leading-7",
         props.className,
       )}
     />

@@ -25,12 +25,10 @@ export default async function PostDetailPage({ params }: Props) {
       <article>
         <div className="px-3 py-4 border-b border-neutral-900">
           <Link href="/" className="text-neutral-500 text-xs font-mono">
-            Back
+            Back to home
           </Link>
           <div className="mt-4">
-            <h1 className="text-md font-serif font-semibold">
-              {frontmatter.title}
-            </h1>
+            <h1 className="text-lg">{frontmatter.title}</h1>
             <span className="font-mono text-xs text-neutral-500">
               {frontmatter.updated}
             </span>

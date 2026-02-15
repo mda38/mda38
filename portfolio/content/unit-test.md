@@ -3,8 +3,6 @@ title: 単体テストの考え方を掴む
 updated: Aug 21, 2016
 ---
 
-## 書籍の検索アプリケーション
-
 ![書籍の検索アプリケーション](https://github.com/daxchx/book-search/assets/149696768/d7e1de76-5eb9-4e31-9ee8-29b8b848df27)
 
 このアプリケーションは、<a href="https://developers.google.com/books?hl=ja">Google Books API</a>を使用した書籍の検索やリソース確認、お気に入り保存ができるアプリケーションです。
