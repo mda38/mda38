@@ -28,7 +28,9 @@ export default async function PostDetailPage({ params }: Props) {
             Back
           </Link>
           <div className="mt-4">
-            <h1 className="text-sm">{frontmatter.title}</h1>
+            <h1 className="text-md font-serif font-semibold">
+              {frontmatter.title}
+            </h1>
             <span className="font-mono text-xs text-neutral-500">
               {frontmatter.updated}
             </span>
