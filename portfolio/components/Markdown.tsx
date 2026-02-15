@@ -40,7 +40,7 @@ const components = {
     <p
       {...props}
       className={joinClassName(
-        "my-4 text-neutral-300 text-sm leading-7",
+        "my-4 text-neutral-400 text-sm leading-7",
         props.className,
       )}
     />
@@ -64,7 +64,7 @@ const components = {
     <li
       {...props}
       className={joinClassName(
-        "my-1 text-sm text-neutral-300 leading-7",
+        "my-1 text-sm text-neutral-400 leading-7",
         props.className,
       )}
     />
@@ -73,7 +73,7 @@ const components = {
     <a
       {...props}
       className={joinClassName(
-        "underline underline-offset-2 text-neutral-300 text-sm decoration-neutral-500 hover:decoration-neutral-200",
+        "underline underline-offset-2 text-neutral-400 text-sm decoration-neutral-500 hover:decoration-neutral-200",
         props.className,
       )}
     />
@@ -82,7 +82,7 @@ const components = {
     <blockquote
       {...props}
       className={joinClassName(
-        "my-4 border-l border-neutral-600 pl-4 text-neutral-300",
+        "my-4 border-l border-neutral-600 pl-4 text-neutral-400",
         props.className,
       )}
     />
@@ -100,7 +100,7 @@ const components = {
     <code
       {...props}
       className={joinClassName(
-        "rounded bg-neutral-900 px-1 mx-0.5 py-0.5 font-mono text-[0.95em] text-neutral-300",
+        "rounded bg-neutral-900 px-1 mx-0.5 py-0.5 font-mono text-[0.95em] text-neutral-400",
         props.className,
       )}
     />
