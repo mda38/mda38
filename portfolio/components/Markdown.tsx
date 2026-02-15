@@ -105,6 +105,12 @@ const components = {
       )}
     />
   ),
+  hr: (props: ComponentPropsWithoutRef<"hr">) => (
+    <hr
+      {...props}
+      className={joinClassName("border-neutral-800", props.className)}
+    />
+  ),
 } as const;
 
 export default function Markdown({ markdown, className }: Props) {
