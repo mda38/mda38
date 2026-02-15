@@ -46,7 +46,7 @@ const components = {
     <p
       {...props}
       className={joinClassName(
-        "my-4 text-neutral-300 text-sm",
+        "my-4 text-neutral-400 text-sm",
         props.className,
       )}
     />
