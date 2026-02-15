@@ -15,9 +15,7 @@ const joinClassName = (base: string, incoming?: string) => {
   return incoming ? `${base} ${incoming}` : base;
 };
 
-const processor = unified()
-  .use(remarkParse)
-  .use(remarkRehype);
+const processor = unified().use(remarkParse).use(remarkRehype);
 
 const components = {
   h1: (props: ComponentPropsWithoutRef<"h1">) => (
@@ -30,7 +28,7 @@ const components = {
     <h2
       {...props}
       className={joinClassName(
-        "mt-8 mb-3 text-2xl font-semibold",
+        "mt-8 mb-3 text-md font-semibold",
         props.className,
       )}
     />
@@ -39,7 +37,7 @@ const components = {
     <h3
       {...props}
       className={joinClassName(
-        "mt-6 mb-2 text-xl font-semibold",
+        "mt-6 mb-2 text-sm font-semibold",
         props.className,
       )}
     />
@@ -47,7 +45,10 @@ const components = {
   p: (props: ComponentPropsWithoutRef<"p">) => (
     <p
       {...props}
-      className={joinClassName("my-4 leading-7", props.className)}
+      className={joinClassName(
+        "my-4 text-neutral-400 text-sm",
+        props.className,
+      )}
     />
   ),
   ul: (props: ComponentPropsWithoutRef<"ul">) => (
@@ -63,13 +64,19 @@ const components = {
     />
   ),
   li: (props: ComponentPropsWithoutRef<"li">) => (
-    <li {...props} className={joinClassName("my-1", props.className)} />
+    <li
+      {...props}
+      className={joinClassName(
+        "my-1 text-sm text-neutral-400",
+        props.className,
+      )}
+    />
   ),
   a: (props: ComponentPropsWithoutRef<"a">) => (
     <a
       {...props}
       className={joinClassName(
-        "underline underline-offset-2 decoration-neutral-500 hover:decoration-neutral-200",
+        "underline underline-offset-2 text-neutral-400 text-sm decoration-neutral-500 hover:decoration-neutral-200",
         props.className,
       )}
     />
@@ -96,7 +103,7 @@ const components = {
     <code
       {...props}
       className={joinClassName(
-        "rounded bg-neutral-900/60 px-1 py-0.5 font-mono text-[0.95em] text-neutral-100",
+        "rounded bg-neutral-900 px-1 mx-0.5 py-0.5 font-mono text-[0.95em] text-neutral-300",
         props.className,
       )}
     />
