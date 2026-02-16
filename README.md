@@ -5,7 +5,7 @@
 - [x] HTML / CSS / JavaScriptを使用した開発経験3年以上
 - [x] TypeScriptを用いた開発経験（個人開発含む）
 - [ ] React、Vue.js、Angular、Web Componentsのいずれかを用いた開発の実務経験が2年以上
-- [ ] SPA(Single-Page Application)構築の実装経験
+- [x] SPA(Single-Page Application)構築の実装経験
 - [ ] プロジェクトにおける設計・技術選定の経験
 - [ ] 環境構築・テスト（下記のいずれかに当てはまること）
 - [ ] Linter：ESLint、Prettierなどを使いコーディングルールを策定した経験
