@@ -3,7 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --diagonal-line: rgba(0, 0, 0, 0.06);
 }
 
 @theme inline {
@@ -17,7 +16,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --diagonal-line: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -25,15 +23,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.diagonal-bg {
-  background-color: var(--background);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--diagonal-line) 0px,
-    var(--diagonal-line) 1px,
-    transparent 1px,
-    transparent 8px
-  );
 }
