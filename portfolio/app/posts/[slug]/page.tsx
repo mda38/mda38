@@ -21,23 +21,21 @@ export default async function PostDetailPage({ params }: Props) {
   const { frontmatter, content } = post;
 
   return (
-    <div className="min-h-screen bg-neutral-950 border-x border-neutral-900 md:mx-auto md:max-w-3xl">
-      <article>
-        <div className="px-3 py-4 border-b border-neutral-900">
-          <Link href="/" className="text-neutral-500 text-xs font-mono">
-            Back to home
-          </Link>
-          <div className="mt-4">
-            <h1 className="text-lg">{frontmatter.title}</h1>
-            <span className="font-mono text-xs text-neutral-500">
-              {frontmatter.updated}
-            </span>
-          </div>
+    <article>
+      <div className="pt-6 pb-3 border-b border-neutral-900">
+        <Link href="/" className="text-neutral-500 text-xs font-mono">
+          Back to home
+        </Link>
+        <div className="mt-4">
+          <h1 className="text-lg mt-2">{frontmatter.title}</h1>
+          <span className="font-mono text-xs text-neutral-500">
+            {frontmatter.updated}・{frontmatter.category}
+          </span>
         </div>
-        <div className="px-3">
-          <Markdown markdown={content} />
-        </div>
-      </article>
-    </div>
+      </div>
+      <div>
+        <Markdown markdown={content} />
+      </div>
+    </article>
   );
 }
