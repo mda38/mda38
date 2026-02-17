@@ -8,6 +8,7 @@ type PostFrontmatter = {
   title?: string;
   date?: string;
   updated?: string;
+  category?: string;
   [key: string]: unknown;
 };
 
