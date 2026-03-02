@@ -31,3 +31,5 @@
 	•	有効/無効がある
 	
 <img width="809" height="376" alt="image" src="https://github.com/user-attachments/assets/bd39b42f-b310-4915-bddc-595992dc6463" />
+
+- e2eでは致命的な導線を自動化する。（テストコストと重要度が見合うもの）
