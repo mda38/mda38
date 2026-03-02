@@ -29,3 +29,5 @@
 	•	例外処理がある
 	•	表示/非表示がある
 	•	有効/無効がある
+	
+<img width="809" height="376" alt="image" src="https://github.com/user-attachments/assets/bd39b42f-b310-4915-bddc-595992dc6463" />
