@@ -3,8 +3,10 @@ import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import type { Root } from "hast";
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
+import Image from "next/image";
 
 type Props = {
   markdown: string;
@@ -15,7 +17,10 @@ const joinClassName = (base: string, incoming?: string) => {
   return incoming ? `${base} ${incoming}` : base;
 };
 
-const processor = unified().use(remarkParse).use(remarkRehype);
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(rehypeRaw);
 
 const components = {
   h1: (props: ComponentPropsWithoutRef<"h1">) => (
@@ -111,6 +116,39 @@ const components = {
       className={joinClassName("border-neutral-800", props.className)}
     />
   ),
+  img: (props: ComponentPropsWithoutRef<"img">) => {
+    const { src, alt, width, height, className, sizes, ...rest } = props;
+    if (!src || typeof src !== "string") return null;
+
+    const parsedWidth =
+      typeof width === "number" ? width : Number.parseInt(String(width), 10);
+    const parsedHeight =
+      typeof height === "number" ? height : Number.parseInt(String(height), 10);
+    const hasSize =
+      Number.isFinite(parsedWidth) &&
+      parsedWidth > 0 &&
+      Number.isFinite(parsedHeight) &&
+      parsedHeight > 0;
+
+    return (
+      <span className="my-6 block w-full">
+        <Image
+          {...rest}
+          src={src}
+          alt={alt ?? ""}
+          width={hasSize ? parsedWidth : 0}
+          height={hasSize ? parsedHeight : 0}
+          sizes={
+            typeof sizes === "string"
+              ? sizes
+              : "(min-width: 768px) 720px, 100vw"
+          }
+          className={joinClassName("h-auto w-full", className)}
+          style={!hasSize ? { width: "100%", height: "auto" } : undefined}
+        />
+      </span>
+    );
+  },
 } as const;
 
 export default function Markdown({ markdown, className }: Props) {
