@@ -44,12 +44,10 @@ UIに関する判断ロジック
 
 こうすることでユーザーに提供するUIの部分をテストすることができるようになる。
 
-<img width="461" height="169" alt="image" src="https://github.com/user-attachments/assets/c805caae-5601-42bc-bcf1-7c27e4d13336" />
-
+<img width="809" height="376" alt="image" src="/frontend-unit-test/2.png" />
 
 ## どの範囲がフロントの単体テストなのか？
 
-<img width="809" height="376" alt="image" src="https://github.com/user-attachments/assets/83ba2165-1f1e-40ce-a745-52439d12f9f5" />
-
+<img width="461" height="169" alt="image" src="/frontend-unit-test/1.png" />
 
 ## フロントでテスト価値のあるものは何？
