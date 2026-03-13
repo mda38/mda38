@@ -1,50 +1,28 @@
-## 以下の証明が必要
+## ディレクトリ構成
 
-### フロントエンド
-
-- [x] HTML / CSS / JavaScriptを使用した開発経験3年以上
-- [x] TypeScriptを用いた開発経験（個人開発含む）
-- [ ] React、Vue.js、Angular、Web Componentsのいずれかを用いた開発の実務経験が2年以上
-- [x] SPA(Single-Page Application)構築の実装経験
-- [ ] プロジェクトにおける設計・技術選定の経験
-- [ ] 環境構築・テスト（下記のいずれかに当てはまること）
-- [ ] Linter：ESLint、Prettierなどを使いコーディングルールを策定した経験
-- [ ] Test：Jest、Mochaなどを使ったフロントエンドのテスト環境の構築経験
-- [ ] Module Bundler：Webpack、Rollup、Viteなどを使った開発環境構築の経験
-- [ ] CI：CircleCI、GitHub Actionsなどを使った継続的インテグレーションの構築経験
-
-### バックエンド
-
-- [ ] REST / HTTPの理解（UIのエラーハンドリングに直結する）
-  - [ ] GET / POST / PATCH / DELETE の理解
-  - [ ] ステータスコード（200, 400, 401, 403, 404, 500）
-  - [ ] idempotent（冪等性）
-  - [ ] キャッシュの概念
-- [ ] 認証・認可（表示制御・ガード設計・セキュリティUI設計に直結する）
-  - [ ] JWTの仕組み
-  - [ ] Cookie vs localStorage
-  - [ ] アクセストークン / リフレッシュトークン
-  - [ ] 401と403の違い
-  - [ ] ロールベースアクセス制御（RBAC）
-- [ ] API設計思想（UI設計の複雑さがAPI設計に依存するから）
-  - [ ] 一覧APIのページネーション
-  - [ ] ソート / フィルタ設計
-  - [ ] N+1問題
-  - [ ] ネストが深すぎるレスポンスの危険性
-  - [ ] エラーレスポンスの標準化
-- [ ] データベースの基本（なぜこのAPIが遅いのかを想像できる）
-  - [ ] インデックスとは何か
-  - [ ] トランザクション
-  - [ ] 正規化の意味
-  - [ ] 外部キー
-  - [ ] JOINの概念
-- [ ] パフォーマンス基礎（体験設計が変わる）
-  - [ ] レスポンスサイズ
-  - [ ] 遅延ロード
-  - [ ] レイテンシ
-  - [ ] 並列リクエスト
-  - [ ] BFF（Backend for Frontend）の考え方
-- [ ] GraphQLの思想
-- [ ] WebSocketの基本
-- [ ] キャッシュ戦略（ETag, SWR的思想）
-- [ ] CDNの役割
+```
+├─ content/ # コンテンツ層（アプリコードとは分離された記事データ）
+│ └─ posts/ # ブログ記事のMarkdownを格納するディレクトリ
+│ ├─ article-1.md # 記事ファイル（Markdown）
+│ └─ article-2.md # 記事ファイル（Markdown）
+│
+├─ src/ # Next.jsアプリケーションのソースコード
+│ ├─ app/ # App Router（ルーティングとページUI）
+│ │ └─ posts/ # /posts に対応するルート
+│ │ ├─ page.tsx # 記事一覧ページ
+│ │ │ # content/posts を読み取り
+│ │ │ # 記事リストを表示する
+│ │ │
+│ │ └─ [slug]/ # 動的ルート（/posts/:slug）
+│ │ └─ page.tsx # 個別記事ページ
+│ │ # slugからMarkdownを取得して表示
+│ │
+│ └─ lib/ # データ取得・変換ロジック
+│ └─ posts.ts # 記事取得ロジック
+│ # - Markdownファイル読み込み
+│ # - frontmatter解析
+│ # - slug取得
+│ # - HTML変換
+│
+└─ package.json # 依存関係とスクリプト
+```
