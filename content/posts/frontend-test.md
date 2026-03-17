@@ -61,7 +61,7 @@ category: engineering
 フロントエンドテストでは、この2つが正しく機能していることを検証し、  
 責務が破綻したときに検知できるようにします。
 
-<img width="841" height="378" alt="image" src="https://github.com/user-attachments/assets/d5c46da6-5372-4dee-8632-814998da1b0c" />
+<img width="809" height="376" alt="image" src="/frontend-test/2.png" />
 
 ## テスト価値を見極める
 
@@ -232,4 +232,4 @@ APIなどの依存をモックして実行されます。
 - 単体テスト
 - E2Eテスト
 
-<img width="809" height="376" alt="image" src="https://github.com/user-attachments/assets/4b28e2a0-67bb-4d8f-a9e1-8baea6cb4a28" />
+<img width="809" height="376" alt="image" src="/frontend-unit-test/1.png" />
