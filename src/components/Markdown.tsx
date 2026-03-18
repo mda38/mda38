@@ -32,7 +32,7 @@ const components = {
   h2: (props: ComponentPropsWithoutRef<"h2">) => (
     <h2
       {...props}
-      className={joinClassName("mt-8 mb-3 text-md", props.className)}
+      className={joinClassName("mt-8 mb-3 text-xl", props.className)}
     />
   ),
   h3: (props: ComponentPropsWithoutRef<"h3">) => (
