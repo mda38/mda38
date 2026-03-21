@@ -1,0 +1,4 @@
+interface:
+  display_name: "スレッド記事化"
+  short_description: "会話スレッドを構造化し技術記事の下書きを生成するスキル"
+  default_prompt: "Use $thread-to-article-ja to convert this entire chat thread into structured Japanese article materials and a draft."
