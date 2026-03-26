@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.markdown pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #262626;
+  background: #0d1117;
+}
+
+.markdown pre code {
+  display: block;
+  min-width: max-content;
+  padding: 1rem;
+  background: transparent;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.markdown .shiki,
+.markdown .shiki span {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}

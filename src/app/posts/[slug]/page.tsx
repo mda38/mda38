@@ -15,10 +15,10 @@ export function generateStaticParams() {
 
 export default async function PostDetailPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const { frontmatter, content } = post;
+  const { frontmatter, html } = post;
 
   return (
     <article>
@@ -34,7 +34,7 @@ export default async function PostDetailPage({ params }: Props) {
         </div>
       </div>
       <div>
-        <Markdown markdown={content} />
+        <Markdown html={html} />
       </div>
     </article>
   );
