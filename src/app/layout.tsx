@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(resolveSiteUrl()),
   title: {
     default: "kanshoku",
-    template: "kanshoku | %s",
+    template: "%s | kanshoku",
   },
   description: "フロントエンド開発の知見をまとめるポートフォリオサイトです。",
   openGraph: {
