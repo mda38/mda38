@@ -16,6 +16,9 @@ export default async function OpengraphImage({ params }: Props) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   const title = post?.frontmatter.title?.toString().trim() || slug;
+  const normalizedTitle = title.replace(/\s+/g, " ").trim();
+  const titleFontSize =
+    normalizedTitle.length > 80 ? 42 : normalizedTitle.length > 48 ? 52 : 62;
 
   return new ImageResponse(
     (
@@ -24,52 +27,46 @@ export default async function OpengraphImage({ params }: Props) {
           display: "flex",
           height: "100%",
           width: "100%",
-          flexDirection: "column",
-          justifyContent: "space-between",
+          alignItems: "center",
+          justifyContent: "center",
           background:
             "radial-gradient(circle at 15% 20%, #34d399 0%, #111827 38%, #020617 100%)",
           color: "#ecfeff",
-          padding: "64px",
         }}
       >
         <div
           style={{
             display: "flex",
-            fontSize: 34,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          kanshoku
-        </div>
-        <div
-          style={{
-            display: "flex",
+            height: 630,
+            width: 630,
             flexDirection: "column",
-            gap: 18,
+            justifyContent: "space-between",
+            padding: "56px",
           }}
         >
           <div
             style={{
               display: "flex",
-              fontSize: 28,
+              fontSize: 34,
+              letterSpacing: "-0.02em",
               opacity: 0.9,
-              letterSpacing: "-0.01em",
             }}
           >
-            Article
+            kanshoku
           </div>
           <div
             style={{
               display: "flex",
-              fontSize: 66,
+              fontSize: titleFontSize,
               fontWeight: 700,
               letterSpacing: "-0.03em",
               lineHeight: 1.08,
-              maxWidth: 1000,
+              width: "100%",
               textWrap: "balance",
+              overflow: "hidden",
             }}
           >
-            {title}
+            {normalizedTitle}
           </div>
         </div>
       </div>
