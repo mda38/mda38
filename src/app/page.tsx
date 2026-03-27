@@ -1,6 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/markdown";
 import Image from "next/image";
+
+const homeTitle = "kanshoku";
+const homeDescription = "フロントエンド開発の知見をまとめるポートフォリオサイトです。";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: homeTitle,
+  },
+  description: homeDescription,
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "kanshoku",
+    title: homeTitle,
+    description: homeDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeDescription,
+  },
+};
 
 export default async function Home() {
   const posts = getAllPosts();
