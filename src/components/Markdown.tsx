@@ -44,28 +44,14 @@ const processor = unified()
   .use(rehypeRaw);
 
 const components: Record<string, MarkdownComponent> = {
-  h1: (props) => {
-    const h1Props = props as ComponentPropsWithoutRef<"h1">;
-    return createElement("h1", {
-      ...h1Props,
-      className: joinClassName(
-        "mt-8 mb-4 text-3xl font-bold",
-        h1Props.className,
-      ),
-    });
-  },
   h2: (props) => {
     const h2Props = props as ComponentPropsWithoutRef<"h2">;
     return createElement("h2", {
       ...h2Props,
-      className: joinClassName("mt-8 mb-3 text-lg", h2Props.className),
-    });
-  },
-  h3: (props) => {
-    const h3Props = props as ComponentPropsWithoutRef<"h3">;
-    return createElement("h3", {
-      ...h3Props,
-      className: joinClassName("mt-6 mb-2 text-sm", h3Props.className),
+      className: joinClassName(
+        "mt-12 mb-4 text-md text-white",
+        h2Props.className,
+      ),
     });
   },
   p: (props) => {
@@ -130,7 +116,7 @@ const components: Record<string, MarkdownComponent> = {
     return createElement("pre", {
       ...preProps,
       className: joinClassName(
-        "my-4 overflow-x-auto rounded-lg border border-neutral-800",
+        "my-4 overflow-x-auto rounded-lg bg-neutral-900 border border-neutral-800",
         preProps.className,
       ),
     });
@@ -140,7 +126,7 @@ const components: Record<string, MarkdownComponent> = {
     return createElement("code", {
       ...codeProps,
       className: joinClassName(
-        "mx-0.5 rounded bg-neutral-900 px-1 py-0.5 font-mono text-[0.95em] text-neutral-300",
+        "mx-0.5 rounded bg-neutral-900 border border-neutral-800 px-1 py-0.5 font-mono text-[0.95em] text-[#e4f0fb]",
         codeProps.className,
       ),
     });
