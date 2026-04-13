@@ -150,7 +150,9 @@ const label = user.status === 'active' ? '有効' : '停止中'
 
 👉 テスト価値が高い
 
+```tsx
 <button className="bg-blue-500" />
+```
 
 👉 見れば分かる
 👉 壊れてもすぐ気づく
