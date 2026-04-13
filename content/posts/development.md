@@ -174,7 +174,9 @@ const label = user.status === 'active' ? '有効' : '停止中'
 
 👉 テストする
 
+```tsx
 <button className="bg-blue-500" />
+```
 
 このコードは
 
