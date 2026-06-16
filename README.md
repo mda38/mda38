@@ -1,35 +1,5 @@
-## テンプレート
+## RESUME
 
-issueに書くこと
-```md
-## 仮説
+[Google Docs RESUME](https://docs.google.com/document/d/1tW70ebqohVv6hKMudVVJhc6dvVpbBeQSJ1c0D3uGnyc/edit?tab=t.0#heading=h.w9pm97tpuzgf)
 
-useEffect は描画後に実行されるはず
-
-## 検証したいこと
-
-- render と effect の実行順を確認したい
-- state 更新時も同じか確認したい
-```
-
-記事の構成テンプレ
-```md
-<!-- 仮説（問い）：こうじゃない？ -->
-## 仮説
-仮説書く。
-
-検証したいことも書く
-1. xxx
-2. xxx
-
-<!-- 検証（具体）：実際にやってみた / 調べた -->
-## 検証
-### 1.xx
-### 2.xx
-
-<!-- 検証結果（事実）：どうなったか -->
-## 検証結果
-
-<!-- 抽象化（まとめ）：だから何が言えるのか（1行程度） -->
-## まとめ
-```
+- Google DocsからPDFファイルをダウンロードしてください。
