@@ -31,11 +31,21 @@ export default async function Home() {
 
   return (
     <>
-      <section className="h-screen min-h-[480px] flex flex-col items-center justify-center">
-        <p className="font-medium">sample</p>
-        <p className="font-medium">sample</p>
-      </section>
       <section>
+        <p className="font-medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+          dolorum sed amet fugit porro voluptate aspernatur doloribus incidunt!
+          Velit fugit non aliquid alias, vel quaerat facere! Eveniet, adipisci?
+          Iure, recusandae?
+        </p>
+        <p className="font-medium">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum aut odio
+          magni ipsa non laboriosam qui numquam, suscipit ipsum? Eius, soluta
+          culpa asperiores libero in tenetur! Rem eius voluptatibus
+          necessitatibus?
+        </p>
+      </section>
+      <section className="mt-20">
         <div className="font-medium mb-10">2026</div>
         <div className="flex gap-x-2">
           <div className="size-6 flex items-center justify-center relative">
