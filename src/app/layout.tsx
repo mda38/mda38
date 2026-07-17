@@ -55,9 +55,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased diagonal-bg bg-emerald-400`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <main className="mx-3 border-x min-h-screen border-dashed border-neutral-800 md:max-w-xl md:mx-auto">
+        <main className="mx-3 min-h-screen md:max-w-xl md:mx-auto">
           {children}
         </main>
       </body>

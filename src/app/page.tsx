@@ -4,7 +4,8 @@ import { getAllPosts } from "@/lib/markdown";
 import Image from "next/image";
 
 const homeTitle = "kanshoku";
-const homeDescription = "フロントエンド開発の知見をまとめるポートフォリオサイトです。";
+const homeDescription =
+  "フロントエンド開発の知見をまとめるポートフォリオサイトです。";
 
 export const metadata: Metadata = {
   title: {
@@ -30,43 +31,77 @@ export default async function Home() {
 
   return (
     <>
-      <section>
-        <div className="ml-4 pt-10">
-          <div className="rounded-full overflow-hidden size-10">
-            <Image src="/me.jpg" alt="me" width={40} height={40} />
-          </div>
-          <div className="pt-2">
-            <p className="text-sm font-mono text-neutral-500">
-              Frontend Developer.
-            </p>
-          </div>
-        </div>
+      <section className="h-screen min-h-[480px] flex flex-col items-center justify-center">
+        <p className="font-medium">
+          I’m Daichi Mishima, an engineer & designer based in Japan. I make a
+          living by independently making web apps.
+        </p>
+        <p className="font-medium">
+          I previously created Zenn, a blogging platform for engineers
+          (acquired). Now I’m working on sizu.me, a space for personal essays,
+          and Nani!?, a playful new AI translator.
+        </p>
       </section>
       <section>
-        <div className="p-3 border-b border-dashed border-neutral-800">
-          <h2 className="bg-teal-950 inline text-xs font-mono text-teal-500 px-1 border-dashed border border-teal-800 ">
-            Writing
-          </h2>
-        </div>
-        <ul className="divide-y divide-neutral-900">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <Link
-                href={`/posts/${post.slug}`}
-                className="flex flex-col gap-y-1 py-4 px-3 rounded-md transition duration-150 ease-out active:scale-[0.99] active:bg-neutral-900/40 active:opacity-90 focus-visible:outline-2 focus-visible:outline-cyan-600/60"
-              >
-                <span className="text-sm">
-                  {post.frontmatter.title ?? post.slug}
-                </span>
-                <div className="flex items-center gap-x-0.5">
-                  <span className="font-mono text-xs text-neutral-500">
-                    {post.frontmatter.updated}・{post.frontmatter.category}
-                  </span>
+        <div className="font-medium mb-10">2026</div>
+        <div className="flex gap-x-2">
+          <div className="size-6 flex items-center justify-center relative">
+            📚
+          </div>
+          <div className="flex flex-col gap-y-2 flex-1">
+            <div className="flex items-center justify-between">
+              <div className="text-sm font-medium">
+                Published a post on zenn.dev
+              </div>
+              <div className="text-xs bg-neutral-100 rounded py-px px-1 text-neutral-400 font-medium">
+                Nov 12, 2026
+              </div>
+            </div>
+            <div className="border border-neutral-100 rounded-2xl p-4">
+              <div className="font-semibold text-sm">Nani翻訳の技術的な話</div>
+              <div className="flex items-center gap-x-2 mt-2">
+                <div className="">
+                  <Image
+                    src="/logo-only.svg"
+                    alt="zenn logo"
+                    width={16}
+                    height={16}
+                  />
                 </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <div className="font-medium text-xs">zenn.dev</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-10 flex gap-x-2">
+          <div className="size-6 flex items-center justify-center relative">
+            📚
+          </div>
+          <div className="flex flex-col gap-y-2 flex-1">
+            <div className="flex items-center justify-between">
+              <div className="text-sm font-medium">
+                Published a post on zenn.dev
+              </div>
+              <div className="text-xs bg-neutral-100 rounded py-px px-1 text-neutral-400 font-medium">
+                Nov 12, 2026
+              </div>
+            </div>
+            <div className="border border-neutral-100 rounded-2xl p-4">
+              <div className="font-semibold text-sm">Nani翻訳の技術的な話</div>
+              <div className="flex items-center gap-x-2 mt-2">
+                <div className="">
+                  <Image
+                    src="/logo-only.svg"
+                    alt="zenn logo"
+                    width={16}
+                    height={16}
+                  />
+                </div>
+                <div className="font-medium text-xs">zenn.dev</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
