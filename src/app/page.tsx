@@ -32,15 +32,8 @@ export default async function Home() {
   return (
     <>
       <section className="h-screen min-h-[480px] flex flex-col items-center justify-center">
-        <p className="font-medium">
-          I’m Daichi Mishima, an engineer & designer based in Japan. I make a
-          living by independently making web apps.
-        </p>
-        <p className="font-medium">
-          I previously created Zenn, a blogging platform for engineers
-          (acquired). Now I’m working on sizu.me, a space for personal essays,
-          and Nani!?, a playful new AI translator.
-        </p>
+        <p className="font-medium">sample</p>
+        <p className="font-medium">sample</p>
       </section>
       <section>
         <div className="font-medium mb-10">2026</div>
