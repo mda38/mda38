@@ -53,12 +53,15 @@ export function FeedTimeline({ items }: FeedTimelineProps) {
         <div key={year} className="mb-10 last:mb-0">
           <div className="font-medium mb-10">{year}</div>
           <div className="flex flex-col">
-            {yearItems.map((item) => {
+            {yearItems.map((item, index) => {
+              const isLastItem = index === yearItems.length - 1;
               const host = new URL(item.url).hostname;
 
               return (
                 <div className="relative" key={item.id}>
-                  <div className="absolute left-2.5 top-7 h-28 w-px border-l border-dashed border-neutral-200" />
+                  {!isLastItem ? (
+                    <div className="absolute left-2.5 top-7 h-28 w-px border-l border-dashed border-neutral-200" />
+                  ) : null}
                   <div className="flex gap-x-2 pb-10">
                     <div className="size-5 flex items-center justify-center relative">
                       <Image

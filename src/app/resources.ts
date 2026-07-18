@@ -15,7 +15,7 @@ export const resources: Resource[] = [
     id: randomUUID(),
     type: "write",
     icon: "zenn",
-    title: "サンプル技術ブログ",
+    title: "ブラウザレンダリングを簡単に理解する",
     description: "Published a post on zenn.dev",
     url: "https://zenn.dev/islaree/articles/dfa5a75d42e50e",
     publishedAt: "2026-07-18",
@@ -54,7 +54,7 @@ export const resources: Resource[] = [
     title: "サンプルコントリビュート",
     description: "Published a post on zenn.dev",
     url: "https://github.com/largearth/todos",
-    publishedAt: "2026-11-12",
+    publishedAt: "2025-11-12",
   },
   {
     id: randomUUID(),
@@ -63,6 +63,6 @@ export const resources: Resource[] = [
     title: "サンプルコントリビュート",
     description: "Published a post on zenn.dev",
     url: "https://github.com/largearth/todos",
-    publishedAt: "2026-11-12",
+    publishedAt: "2025-11-12",
   },
 ];

@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export function Footer() {
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
