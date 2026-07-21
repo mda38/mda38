@@ -65,4 +65,13 @@ export const resources: Resource[] = [
     url: "https://github.com/largearth/todos",
     publishedAt: "2025-11-12",
   },
+  {
+    id: randomUUID(),
+    type: "contribute",
+    icon: "github",
+    title: "Opened an issue in reactjs/ja.react.dev",
+    description: "Reported a typo in the useState reference page",
+    url: "https://github.com/reactjs/ja.react.dev/issues/742",
+    publishedAt: "2024-03-27",
+  }
 ];
