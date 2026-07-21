@@ -69,8 +69,8 @@ export const resources: Resource[] = [
     id: randomUUID(),
     type: "contribute",
     icon: "github",
-    title: "Opened an issue in reactjs/ja.react.dev",
-    description: "Reported a typo in the useState reference page",
+    title: "ドキュメントのタイポミスを報告",
+    description: "Opened an issue in reactjs/ja.react.dev",
     url: "https://github.com/reactjs/ja.react.dev/issues/742",
     publishedAt: "2024-03-27",
   }
