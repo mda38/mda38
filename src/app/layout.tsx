@@ -30,20 +30,20 @@ const resolveSiteUrl = () => {
 export const metadata: Metadata = {
   metadataBase: new URL(resolveSiteUrl()),
   title: {
-    default: "kanshoku",
-    template: "%s | kanshoku",
+    default: "largearth",
+    template: "%s | largearth",
   },
   description: "フロントエンド開発の知見をまとめるポートフォリオサイトです。",
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    siteName: "kanshoku",
-    title: "kanshoku",
+    siteName: "largearth",
+    title: "largearth",
     description: "フロントエンド開発の知見をまとめるポートフォリオサイトです。",
   },
   twitter: {
     card: "summary_large_image",
-    title: "kanshoku",
+    title: "largearth",
     description: "フロントエンド開発の知見をまとめるポートフォリオサイトです。",
   },
 };
