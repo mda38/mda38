@@ -85,3 +85,18 @@ type Data = {
 - 表示内容を増やすときは `feed.json` に項目を追加すればよい
 - 今後管理項目が増えた場合は、`feed.json` から `feed.ts` や CMS に移行する余地がある
 
+## 自己紹介文
+```text
+I am Daishi Mishima, a front-end engineer.
+
+Focusing on web application development, I work on a wide range of tasks from new development to feature improvements. I enjoy building UIs and value creating experiences that not only look good but also feel great to interact with.
+
+On Zenn, I compile my daily learnings and implementation insights through technical articles and scraps. On sizu.me, I write about my thoughts at my own pace, without limiting myself to technical topics.
+```
+```text
+フロントエンドエンジニアをしている三島大地です。
+
+Webアプリケーションの開発を中心に、新規開発から機能改善まで幅広く取り組んでいます。UIを組み立てることが好きで、見た目だけでなく、触っていて心地よい体験をつくることを大切にしています。
+
+Zennでは技術記事やスクラップを通して、日々の学びや実装の知見をまとめています。sizu.meでは、技術に限らず、考えたことを自分のペースで書いています。
+```
