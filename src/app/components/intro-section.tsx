@@ -13,7 +13,7 @@ export function IntroSection() {
         Focusing on web application development, I work on a wide range of tasks from new development to feature improvements. I enjoy building UIs and value creating experiences that not only look good but also feel great to interact with.
       </p>
       <p className="font-medium">
-        On <a href="https://zenn.dev/islaree" className="text-color-[#014AF8]">Zenn</a>, I compile my daily learnings and implementation insights through technical articles and scraps. On <a href="https://sizu.me/3d41" className="text-color-[#014AF8]">sizu.me</a>, I write about my thoughts at my own pace, without limiting myself to technical topics.
+        On <a href="https://zenn.dev/islaree" className="text-[#014AF8] underline hover:opacity-60">Zenn</a>, I compile my daily learnings and implementation insights through technical articles and scraps. On <a href="https://sizu.me/3d41" className="text-[#014AF8] underline hover:opacity-60">sizu.me</a>, I write about my thoughts at my own pace, without limiting myself to technical topics.
       </p>
     </section>
   );
